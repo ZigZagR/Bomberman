@@ -239,7 +239,7 @@ int contaMapas()
 	int total = 0;
 	while (true)
 	{
-		string nome = "mapa" + to_string(total + 1) + ".txt";
+		string nome = "mapas/mapa_" + to_string(total + 1) + ".txt";
 		ifstream f(nome);
 		if (!f.is_open())
 			break; // aq para
@@ -339,7 +339,7 @@ bool leCelulas(ifstream &f, Mapa &m, string &erro)
 // Abre mapa{id}.txt, aloca memoria e valida dimensoes e jogadores
 bool carregaMapa(int id, Mapa &m, string &erro)
 {
-	ifstream f("mapa" + to_string(id) + ".txt");
+	ifstream f("mapas/mapa_" + to_string(id) + ".txt");
 	if (!f.is_open())
 	{
 		erro = "Arquivo nao encontrado";
